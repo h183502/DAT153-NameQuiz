@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">nameQuiz</string>
+    <string name="button_quiz">Quiz</string>
+    <string name="button_database">Database</string>
+    <string name="button_add_activity">Add activity</string>
+    <string name="buttonPhoto">Add photo</string>
+    <string name="addActivity">Add kitten</string>
+    <string name="SubmitAnswer">Submit answer</string>
+    <string name="quiz">Quiz time!</string>
+    <string name="restartBtn">Restart quiz!</string>
+    <string name="hint">Write answer here</string>
+</resources>

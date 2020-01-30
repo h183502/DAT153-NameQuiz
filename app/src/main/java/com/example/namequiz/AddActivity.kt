@@ -37,6 +37,7 @@ class AddActivity : AppCompatActivity() {
         Toast.makeText(this, "${inputText.text} added to database!", Toast.LENGTH_SHORT).show()
         inputText.setText("")
         imageView.setImageDrawable(null)
+        restart(view)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -44,6 +45,21 @@ class AddActivity : AppCompatActivity() {
         val imageView = findViewById<ImageView>(R.id.imageView)
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_IMAGE_PICK){
             imageView.setImageURI(data?.data)
+            imageAdded(isAdded = true)
         }
+    }
+
+    private fun imageAdded(isAdded: Boolean){
+        if(isAdded){
+            addActivityButton.visibility = View.VISIBLE
+            inputText.visibility = View.VISIBLE
+            buttonPhoto.visibility = View.INVISIBLE
+        }
+    }
+
+    fun restart(view: View){
+        buttonPhoto.visibility = View.VISIBLE
+        inputText.visibility = View.INVISIBLE
+        addActivityButton.visibility = View.INVISIBLE
     }
 }

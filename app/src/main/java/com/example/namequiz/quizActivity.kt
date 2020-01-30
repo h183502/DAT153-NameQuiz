@@ -50,6 +50,7 @@ class quizActivity : AppCompatActivity() {
         val isCorrect = quiz.answer(inputAnswer.text.toString())
         textKittens.text = quiz.attempts.toString()
         yourScore.text = quiz.score.toString()
+        displayFeedback(isCorrect)
         inputAnswer.setText("")
 
         if (!quiz.isDone()){
@@ -60,6 +61,12 @@ class quizActivity : AppCompatActivity() {
             restartBtn.visibility = View.VISIBLE
 
 
+        }
+    }
+
+    private fun displayFeedback(isCorrect: Boolean){
+        if(isCorrect){
+            textFeedback.visibility = View.VISIBLE
         }
     }
 

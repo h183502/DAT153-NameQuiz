@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
@@ -15,6 +16,7 @@ class CustomAdapter(val kittenList: ArrayList<Kittens>) : RecyclerView.Adapter<C
 
         val imageViewName = itemView.findViewById(R.id.imageViewName) as ImageView
         val textViewName = itemView.findViewById(R.id.textViewName) as TextView
+        val deleteButton = itemView.findViewById(R.id.deleteButton) as Button
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,6 +34,15 @@ class CustomAdapter(val kittenList: ArrayList<Kittens>) : RecyclerView.Adapter<C
 
         holder.imageViewName.setImageBitmap(kittens.image)
         holder.textViewName.text = kittens.name
+        holder.deleteButton.setOnClickListener{
+            kittenList.removeAt(holder.adapterPosition)
+            notifyItemRemoved(holder.adapterPosition)
+        }
 
+    }
+
+    fun removeKitten(view: View, position: Int){
+        kittenList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

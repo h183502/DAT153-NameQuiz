@@ -22,4 +22,5 @@ class DbActivity : AppCompatActivity() {
 
         recyclerView.adapter = adapter
     }
+
 }

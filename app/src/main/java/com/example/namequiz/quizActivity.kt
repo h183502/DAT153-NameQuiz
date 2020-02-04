@@ -12,6 +12,7 @@ class quizActivity : AppCompatActivity() {
 
     lateinit var quiz: Quiz
     lateinit var data: ArrayList<Kittens>
+    lateinit var currentKitten: Kittens
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class quizActivity : AppCompatActivity() {
     private fun runRound(){
         val kitten = quiz.pickKitten()
         imageViewQuiz.setImageBitmap(kitten.image)
+        currentKitten = kitten
     }
 
     fun restart(view: View){
@@ -67,6 +69,9 @@ class quizActivity : AppCompatActivity() {
     private fun displayFeedback(isCorrect: Boolean){
         if(isCorrect){
             textFeedback.visibility = View.VISIBLE
+        }else {
+            val msg = "Wrong answer! Correct answer was ${currentKitten.name}"
+            Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         }
     }
 

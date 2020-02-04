@@ -28,6 +28,15 @@
                 android:textAlignment="center"
                 android:textSize="25dp"/>
 
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                android:text="@string/deletePic"
+                android:layout_gravity="center"
+                />
+
 
         </LinearLayout>
 

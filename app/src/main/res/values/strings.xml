@@ -10,4 +10,7 @@
     <string name="restartBtn">Restart quiz!</string>
     <string name="hint">Write answer here</string>
     <string name="hint2">Name your kitten</string>
+    <string name="backToDb">Go to database</string>
+    <string name="deletePic">Delete</string>
+    <string name="enterShared">Enter pref name</string>
 </resources>

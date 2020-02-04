@@ -20,6 +20,12 @@ class AddActivity : AppCompatActivity() {
         setContentView(R.layout.add_activity)
     }
 
+    public fun onClickDatabase2(view: View){
+        val database = Intent(this, DbActivity::class.java)
+
+        startActivity(database)
+    }
+
     val REQUEST_IMAGE_CAPTURE = 1
     val REQUEST_IMAGE_PICK = 2
 
@@ -62,4 +68,5 @@ class AddActivity : AppCompatActivity() {
         inputText.visibility = View.INVISIBLE
         addActivityButton.visibility = View.INVISIBLE
     }
+
 }

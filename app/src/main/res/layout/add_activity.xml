@@ -31,4 +31,11 @@
         android:onClick="addKitten"
         android:visibility="invisible"/>
 
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:text="@string/backToDb"
+        android:textAlignment="center"
+        android:onClick="onClickDatabase2" />
+
 </LinearLayout>

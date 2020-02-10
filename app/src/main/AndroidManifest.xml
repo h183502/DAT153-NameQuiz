@@ -17,6 +17,7 @@
         <activity android:name=".quizActivity"></activity>
         <activity android:name=".AddActivity" />
         <activity android:name=".SettingsActivity" />
+        <activity android:name=".setNameActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
